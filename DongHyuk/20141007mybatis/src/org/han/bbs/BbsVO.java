@@ -1,0 +1,40 @@
+package org.han.bbs;
+
+public class BbsVO {
+
+	private int bbsno;
+	private String title;
+	private String content;
+	private String writer;
+	public int getBbsno() {
+		return bbsno;
+	}
+	public void setBbsno(int bbsno) {
+		this.bbsno = bbsno;
+	}
+	public String getTitle() {
+		return title;
+	}
+	public void setTitle(String title) {
+		this.title = title;
+	}
+	public String getContent() {
+		return content;
+	}
+	public void setContent(String content) {
+		this.content = content;
+	}
+	public String getWriter() {
+		return writer;
+	}
+	public void setWriter(String writer) {
+		this.writer = writer;
+	}
+	@Override
+	public String toString() {
+		return "BbsVO [bbsno=" + bbsno + ", title=" + title + ", content="
+				+ content + ", writer=" + writer + "]";
+	}
+	
+	
+}

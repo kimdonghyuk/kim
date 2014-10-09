@@ -1,0 +1,9 @@
+package org.han.member;
+
+public interface MemberMapper {
+	
+	public void create(MemberVO vo)throws Exception{
+		
+	}
+
+}

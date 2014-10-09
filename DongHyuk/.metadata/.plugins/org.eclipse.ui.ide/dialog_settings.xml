@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="ExternalProjectImportWizard">
+		<item value="false" key="WizardProjectsImportPage.STORE_NESTED_PROJECTS"/>
+		<item value="true" key="WizardProjectsImportPage.STORE_COPY_PROJECT_ID"/>
+		<item value="false" key="WizardProjectsImportPage.STORE_ARCHIVE_SELECTED"/>
+		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value="C:\Users\user\Desktop\Study\2014 October 2weeks\2014.10.08\mybatis"/>
+			<item value="C:\Users\user\Desktop\Study\2014 October 2weeks\2014.10.06\Mp3_mini_project"/>
+			<item value="C:\Java\20140915\mp32"/>
+			<item value="C:\Java\20140915\Mp3List"/>
+			<item value="C:\Java\20140915\mini"/>
+		</list>
+		<list key="WizardProjectsImportPage.STORE_ARCHIVES">
+			<item value=""/>
+		</list>
+	</section>
+</section>

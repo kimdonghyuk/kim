@@ -1,0 +1,8 @@
+package org.han.member;
+
+public class MemberVO {
+
+		private String userid;
+		
+		
+}

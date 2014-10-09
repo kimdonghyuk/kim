@@ -1,0 +1,63 @@
+package org.han.dao;
+
+import java.io.Reader;
+
+import org.apache.ibatis.io.Resources;
+import org.apache.ibatis.session.SqlSession;
+import org.apache.ibatis.session.SqlSessionFactory;
+import org.apache.ibatis.session.SqlSessionFactoryBuilder;
+
+public class GenericDAO<VO, K> {
+
+	private static SqlSessionFactory sqlMapper;
+
+	static {
+		try {
+			Reader reader = Resources.getResourceAsReader("mybatisConfig.xml");
+			sqlMapper = new SqlSessionFactoryBuilder().build(reader);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+
+	private String mapperName;
+
+	public GenericDAO(String mapperName) {
+		this.mapperName = mapperName;
+	}
+
+	public void create(VO vo) throws Exception {
+
+		try (SqlSession session = sqlMapper.openSession()) {
+
+			session.insert(mapperName + ".create", vo);
+			session.commit();
+		}
+
+	}
+
+	public VO read(K key) throws Exception {
+
+		try (SqlSession session = sqlMapper.openSession()) {
+
+			return session.selectOne(mapperName + ".read", key);
+		}
+
+	}
+	
+	public void update(VO vo) throws Exception{
+		try (SqlSession session = sqlMapper.openSession()) {
+
+			session.update(mapperName + ".update", vo);
+			session.commit();
+			
+		}
+
+	}
+	
+	public VO iftest(K key) throws Exception{
+		try(SqlSession session = sqlMapper.openSession()){
+			return session.selectOne(mapperName + ".iftest",key);
+		}
+	}
+}

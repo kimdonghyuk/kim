@@ -1,0 +1,8 @@
+package org.han.dao;
+
+public class BbsCritera {
+	
+	private String[] type;
+	private String keyword;
+
+}

@@ -1,0 +1,12 @@
+package org.han.member;
+
+import org.apache.ibatis.annotations.Insert;
+
+public interface MemberMapper {
+
+	@Insert("insert into tbl_memeber (userid, userpw, username, phone, email)")
+	public void create(MemberVO vo)throws Exception{
+		
+	}
+
+}
