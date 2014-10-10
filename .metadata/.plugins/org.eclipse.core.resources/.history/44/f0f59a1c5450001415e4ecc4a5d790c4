@@ -1,0 +1,27 @@
+package a1;
+
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.ApplicationContext;
+import org.springframework.test.context.ContextConfiguration;
+import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+
+
+@RunWith(SpringJUnit4ClassRunner.class)
+@ContextConfiguration(locations = {"classpath:applicationContext.xml"})
+public class SnackTest {
+// @RunWith(SpringJUnit4ClassRunner.class)
+// @ContextConfiguration(locations = {"classpath:applicationContext.xml"})
+// Run과 Context를 실행하면 그 실행된 경로에 지정된 xml파일로 바로 가게 됨.
+// web 창에 안 띄우고 이곳에서 하는 이유는 웹에 띄울때마다 run을 해주면 낭비가 심함.	
+	@Autowired
+	ApplicationContext ctx;
+	
+	@Test
+	public void test() {
+		System.out.println(ctx);
+		System.out.println(ctx.getBean("p1"));
+	}
+
+}

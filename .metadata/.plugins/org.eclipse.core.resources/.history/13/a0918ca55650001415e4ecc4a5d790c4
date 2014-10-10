@@ -1,0 +1,17 @@
+package a1;
+
+@Component
+public class People {
+
+	private Snack snack;
+
+	public void setSnack(Snack snack) {
+		this.snack = snack;
+	}
+
+	@Override
+	public String toString() {
+		return "People [snack=" + snack + "]";
+	}
+
+}

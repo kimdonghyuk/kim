@@ -1,0 +1,20 @@
+package a1;
+
+import org.junit.Test;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.ApplicationContext;
+import org.springframework.test.context.ContextConfiguration;
+
+@RunWith(SpringJUnit4ClassRunner.class)
+@ContextConfiguration("/applicationContext.xml")
+public class SnackTest {
+
+	@Autowired
+	People p1;
+	
+	@Test
+	public void test() {
+		System.out.println(p1);
+	}
+
+}

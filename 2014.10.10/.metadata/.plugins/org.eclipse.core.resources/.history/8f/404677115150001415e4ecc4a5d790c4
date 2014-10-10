@@ -1,0 +1,18 @@
+package a1;
+
+import org.junit.Test;
+import org.springframework.context.ApplicationContext;
+import org.springframework.test.context.ContextConfiguration;
+
+@ContextConfiguration("/applicationContext.xml")
+public class SnackTest {
+
+	@Autowired
+	ApplicationContext ctx;
+	
+	@Test
+	public void test() {
+		System.out.println(ctx);
+	}
+
+}
